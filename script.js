@@ -84,3 +84,135 @@ if ("IntersectionObserver" in window && observedSections.length) {
   }, { threshold: [0.2, 0.45], rootMargin: "-20% 0px -55% 0px" });
   observedSections.forEach((section) => sectionObserver.observe(section));
 }
+
+const galleryDialog = document.querySelector("#vale-gallery");
+if (galleryDialog) {
+  const galleryThumbnails = [...galleryDialog.querySelectorAll(".gallery-thumbnail")];
+  const galleryImage = galleryDialog.querySelector(".gallery-main-image");
+  const galleryCity = galleryDialog.querySelector(".gallery-city");
+  const galleryCounter = galleryDialog.querySelector(".gallery-counter");
+  const galleryLauncher = document.querySelector(".gallery-launcher");
+  let activeGalleryIndex = 0;
+
+  function showGalleryPhoto(index) {
+    activeGalleryIndex = (index + galleryThumbnails.length) % galleryThumbnails.length;
+    const selected = galleryThumbnails[activeGalleryIndex];
+    galleryImage.src = selected.dataset.src;
+    galleryImage.alt = selected.dataset.alt;
+    galleryCity.textContent = selected.dataset.city;
+    galleryCounter.textContent = `${activeGalleryIndex + 1} de ${galleryThumbnails.length}`;
+    galleryThumbnails.forEach((thumbnail, thumbnailIndex) => {
+      const isSelected = thumbnailIndex === activeGalleryIndex;
+      thumbnail.classList.toggle("is-selected", isSelected);
+      thumbnail.setAttribute("aria-pressed", String(isSelected));
+    });
+  }
+
+  galleryLauncher?.addEventListener("click", () => {
+    showGalleryPhoto(activeGalleryIndex);
+    if (typeof galleryDialog.showModal === "function") galleryDialog.showModal();
+    else galleryDialog.setAttribute("open", "");
+  });
+  galleryDialog.querySelector(".gallery-close")?.addEventListener("click", () => galleryDialog.close());
+  galleryDialog.querySelector(".gallery-previous")?.addEventListener("click", () => showGalleryPhoto(activeGalleryIndex - 1));
+  galleryDialog.querySelector(".gallery-next")?.addEventListener("click", () => showGalleryPhoto(activeGalleryIndex + 1));
+  galleryThumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => showGalleryPhoto(index));
+  });
+  galleryDialog.addEventListener("click", (event) => {
+    if (event.target === galleryDialog) galleryDialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!galleryDialog.open) return;
+    if (event.key === "ArrowLeft") showGalleryPhoto(activeGalleryIndex - 1);
+    if (event.key === "ArrowRight") showGalleryPhoto(activeGalleryIndex + 1);
+  });
+}
+
+const serraGalleryDialog = document.querySelector("#serra-gallery");
+if (serraGalleryDialog) {
+  const serraThumbnails = [...serraGalleryDialog.querySelectorAll(".gallery-thumbnail")];
+  const serraImage = serraGalleryDialog.querySelector(".gallery-main-image");
+  const serraCity = serraGalleryDialog.querySelector(".gallery-city");
+  const serraCounter = serraGalleryDialog.querySelector(".gallery-counter");
+  const serraLauncher = document.querySelector(".serra-gallery-launcher");
+  let activeSerraIndex = 0;
+
+  function showSerraPhoto(index) {
+    activeSerraIndex = (index + serraThumbnails.length) % serraThumbnails.length;
+    const selected = serraThumbnails[activeSerraIndex];
+    serraImage.src = selected.dataset.src;
+    serraImage.alt = selected.dataset.alt;
+    serraCity.textContent = selected.dataset.city;
+    serraCounter.textContent = `${activeSerraIndex + 1} de ${serraThumbnails.length}`;
+    serraThumbnails.forEach((thumbnail, thumbnailIndex) => {
+      const isSelected = thumbnailIndex === activeSerraIndex;
+      thumbnail.classList.toggle("is-selected", isSelected);
+      thumbnail.setAttribute("aria-pressed", String(isSelected));
+    });
+  }
+
+  serraLauncher?.addEventListener("click", () => {
+    showSerraPhoto(activeSerraIndex);
+    if (typeof serraGalleryDialog.showModal === "function") serraGalleryDialog.showModal();
+    else serraGalleryDialog.setAttribute("open", "");
+  });
+  serraGalleryDialog.querySelector(".gallery-close")?.addEventListener("click", () => serraGalleryDialog.close());
+  serraGalleryDialog.querySelector(".gallery-previous")?.addEventListener("click", () => showSerraPhoto(activeSerraIndex - 1));
+  serraGalleryDialog.querySelector(".gallery-next")?.addEventListener("click", () => showSerraPhoto(activeSerraIndex + 1));
+  serraThumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => showSerraPhoto(index));
+  });
+  serraGalleryDialog.addEventListener("click", (event) => {
+    if (event.target === serraGalleryDialog) serraGalleryDialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!serraGalleryDialog.open) return;
+    if (event.key === "ArrowLeft") showSerraPhoto(activeSerraIndex - 1);
+    if (event.key === "ArrowRight") showSerraPhoto(activeSerraIndex + 1);
+  });
+}
+
+const litoralGalleryDialog = document.querySelector("#litoral-gallery");
+if (litoralGalleryDialog) {
+  const litoralThumbnails = [...litoralGalleryDialog.querySelectorAll(".gallery-thumbnail")];
+  const litoralImage = litoralGalleryDialog.querySelector(".gallery-main-image");
+  const litoralCity = litoralGalleryDialog.querySelector(".gallery-city");
+  const litoralCounter = litoralGalleryDialog.querySelector(".gallery-counter");
+  const litoralLauncher = document.querySelector(".litoral-gallery-launcher");
+  let activeLitoralIndex = 0;
+
+  function showLitoralPhoto(index) {
+    activeLitoralIndex = (index + litoralThumbnails.length) % litoralThumbnails.length;
+    const selected = litoralThumbnails[activeLitoralIndex];
+    litoralImage.src = selected.dataset.src;
+    litoralImage.alt = selected.dataset.alt;
+    litoralCity.textContent = selected.dataset.city;
+    litoralCounter.textContent = `${activeLitoralIndex + 1} de ${litoralThumbnails.length}`;
+    litoralThumbnails.forEach((thumbnail, thumbnailIndex) => {
+      const isSelected = thumbnailIndex === activeLitoralIndex;
+      thumbnail.classList.toggle("is-selected", isSelected);
+      thumbnail.setAttribute("aria-pressed", String(isSelected));
+    });
+  }
+
+  litoralLauncher?.addEventListener("click", () => {
+    showLitoralPhoto(activeLitoralIndex);
+    if (typeof litoralGalleryDialog.showModal === "function") litoralGalleryDialog.showModal();
+    else litoralGalleryDialog.setAttribute("open", "");
+  });
+  litoralGalleryDialog.querySelector(".gallery-close")?.addEventListener("click", () => litoralGalleryDialog.close());
+  litoralGalleryDialog.querySelector(".gallery-previous")?.addEventListener("click", () => showLitoralPhoto(activeLitoralIndex - 1));
+  litoralGalleryDialog.querySelector(".gallery-next")?.addEventListener("click", () => showLitoralPhoto(activeLitoralIndex + 1));
+  litoralThumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => showLitoralPhoto(index));
+  });
+  litoralGalleryDialog.addEventListener("click", (event) => {
+    if (event.target === litoralGalleryDialog) litoralGalleryDialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!litoralGalleryDialog.open) return;
+    if (event.key === "ArrowLeft") showLitoralPhoto(activeLitoralIndex - 1);
+    if (event.key === "ArrowRight") showLitoralPhoto(activeLitoralIndex + 1);
+  });
+}

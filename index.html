@@ -88,19 +88,102 @@
     <section class="section destinations page-width" id="destinos" aria-labelledby="destinations-title">
       <div class="section-heading" data-reveal><span></span><h2 id="destinations-title">Nossos Destinos</h2><span></span></div>
       <div class="destination-grid">
-        <a class="destination-card destination-vale" data-reveal data-wa-message="Olá! Gostaria de conhecer as opções de viagens para o Vale do Paraíba." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para o Vale do Paraíba">
-          <span class="destination-media"><img src="assets/vale-do-paraiba.jpg" alt="Basílica no Vale do Paraíba ao entardecer" loading="lazy" decoding="async"></span>
-          <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><strong>Vale do Paraíba</strong></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
-        </a>
-        <a class="destination-card destination-serra" data-reveal data-wa-message="Olá! Tenho interesse em conhecer os pacotes para a Serra da Mantiqueira." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para a Serra da Mantiqueira">
-          <span class="destination-media"><img src="assets/serra-da-mantiqueira.jpg" alt="Formação rochosa e vegetação da Serra da Mantiqueira" loading="lazy" decoding="async"></span>
-          <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg><strong>Serra da Mantiqueira</strong></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
-        </a>
-        <a class="destination-card destination-litoral" data-reveal data-wa-message="Olá! Gostaria de consultar os pacotes disponíveis para o Litoral Norte." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para o Litoral Norte">
-          <span class="destination-media"><img src="assets/litoral-norte.jpg" alt="Enseada cercada por mata e palmeiras no Litoral Norte" loading="lazy" decoding="async"></span>
-          <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg><strong>Litoral Norte</strong></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
-        </a>
+        <article class="destination-card destination-vale" data-reveal>
+          <a class="destination-card-link" data-wa-message="Olá! Gostaria de conhecer as opções de viagens para o Vale do Paraíba." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para o Vale do Paraíba">
+            <span class="destination-media"><img src="assets/vale-do-paraiba.jpg" alt="Basílica em Aparecida do Norte" loading="lazy" decoding="async"></span>
+            <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span class="destination-caption-text"><strong>Vale do Paraíba</strong><small>Aparecida do Norte</small></span></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+          </a>
+          <button class="button gallery-launcher" type="button" aria-haspopup="dialog" aria-controls="vale-gallery">Ver galeria do Vale do Paraíba</button>
+        </article>
+        <article class="destination-card destination-serra" data-reveal>
+          <a class="destination-card-link" data-wa-message="Olá! Tenho interesse em conhecer os pacotes para a Serra da Mantiqueira." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para a Serra da Mantiqueira">
+            <span class="destination-media"><img src="assets/serra-da-mantiqueira.jpg" alt="Pedra do Baú na Serra da Mantiqueira" loading="lazy" decoding="async"></span>
+            <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg><span class="destination-caption-text"><strong>Serra da Mantiqueira</strong><small>Pedra do Baú</small></span></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+          </a>
+          <button class="button gallery-launcher serra-gallery-launcher" type="button" aria-haspopup="dialog" aria-controls="serra-gallery">Ver galeria da Serra da Mantiqueira</button>
+        </article>
+        <article class="destination-card destination-litoral" data-reveal>
+          <a class="destination-card-link" data-wa-message="Olá! Gostaria de consultar os pacotes disponíveis para o Litoral Norte." target="_blank" rel="noopener noreferrer" aria-label="Consultar viagens para o Litoral Norte">
+            <span class="destination-media"><img src="assets/litoral-norte.jpg" alt="Praia do Português em Ubatuba, no Litoral Norte" loading="lazy" decoding="async"></span>
+            <span class="destination-footer"><span class="destination-caption"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg><span class="destination-caption-text"><strong>Litoral Norte</strong><small>Praia do Português - Ubatuba</small></span></span><span class="round-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+          </a>
+          <button class="button gallery-launcher litoral-gallery-launcher" type="button" aria-haspopup="dialog" aria-controls="litoral-gallery">Ver galeria do Litoral Norte</button>
+        </article>
       </div>
+
+      <dialog class="destination-gallery" id="vale-gallery" aria-labelledby="vale-gallery-title">
+        <div class="gallery-dialog-inner">
+          <header class="gallery-heading">
+            <div><p class="gallery-eyebrow">VALE DO PARAÍBA</p><h3 id="vale-gallery-title">Galeria de destinos</h3></div>
+            <button class="gallery-close" type="button" aria-label="Fechar galeria">×</button>
+          </header>
+          <div class="gallery-stage">
+            <button class="gallery-nav gallery-previous" type="button" aria-label="Foto anterior"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <figure class="gallery-figure">
+              <img class="gallery-main-image" src="assets/vale-do-paraiba.jpg" alt="Basílica em Aparecida do Norte">
+              <figcaption><strong class="gallery-city">Aparecida do Norte</strong><span class="gallery-counter">1 de 6</span></figcaption>
+            </figure>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Próxima foto"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="gallery-thumbnails" aria-label="Escolha uma cidade">
+            <button class="gallery-thumbnail is-selected" type="button" aria-label="Ver foto de Aparecida do Norte" aria-pressed="true" data-src="assets/vale-do-paraiba.jpg" data-city="Aparecida do Norte" data-alt="Basílica em Aparecida do Norte"><img src="assets/vale-do-paraiba.jpg" alt="" loading="lazy"><span>Aparecida do Norte</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Campos do Jordão" aria-pressed="false" data-src="assets/vale-campos-do-jordao.jpg" data-city="Campos do Jordão" data-alt="Construção com flores em Campos do Jordão"><img src="assets/vale-campos-do-jordao.jpg" alt="" loading="lazy"><span>Campos do Jordão</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de São José dos Campos" aria-pressed="false" data-src="assets/vale-sao-jose-dos-campos.jpg" data-city="São José dos Campos" data-alt="Parque urbano em São José dos Campos"><img src="assets/vale-sao-jose-dos-campos.jpg" alt="" loading="lazy"><span>São José dos Campos</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Santo Antônio do Pinhal" aria-pressed="false" data-src="assets/vale-santo-antonio-do-pinhal.jpg" data-city="Santo Antônio do Pinhal" data-alt="Escadaria colorida de uma igreja em Santo Antônio do Pinhal"><img src="assets/vale-santo-antonio-do-pinhal.jpg" alt="" loading="lazy"><span>Santo Antônio do Pinhal</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de São Bento do Sapucaí" aria-pressed="false" data-src="assets/vale-sao-bento-do-sapucai.jpg" data-city="São Bento do Sapucaí" data-alt="Paisagem de montanha em São Bento do Sapucaí"><img src="assets/vale-sao-bento-do-sapucai.jpg" alt="" loading="lazy"><span>São Bento do Sapucaí</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Cunha" aria-pressed="false" data-src="assets/vale-cunha.jpg" data-city="Cunha" data-alt="Igreja no centro de Cunha"><img src="assets/vale-cunha.jpg" alt="" loading="lazy"><span>Cunha</span></button>
+          </div>
+          <a class="button gallery-contact" data-wa-message="Olá! Gostaria de conhecer as opções de viagens para o Vale do Paraíba." target="_blank" rel="noopener noreferrer">Consultar o Vale do Paraíba <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </dialog>
+      <dialog class="destination-gallery" id="serra-gallery" aria-labelledby="serra-gallery-title">
+        <div class="gallery-dialog-inner">
+          <header class="gallery-heading">
+            <div><p class="gallery-eyebrow">SERRA DA MANTIQUEIRA</p><h3 id="serra-gallery-title">Galeria de destinos</h3></div>
+            <button class="gallery-close" type="button" aria-label="Fechar galeria">×</button>
+          </header>
+          <div class="gallery-stage">
+            <button class="gallery-nav gallery-previous" type="button" aria-label="Foto anterior"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <figure class="gallery-figure">
+              <img class="gallery-main-image" src="assets/serra-da-mantiqueira.jpg" alt="Pedra do Baú na Serra da Mantiqueira">
+              <figcaption><strong class="gallery-city">Pedra do Baú</strong><span class="gallery-counter">1 de 5</span></figcaption>
+            </figure>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Próxima foto"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="gallery-thumbnails" aria-label="Escolha um destino da Serra da Mantiqueira">
+            <button class="gallery-thumbnail is-selected" type="button" aria-label="Ver foto da Pedra do Baú" aria-pressed="true" data-src="assets/serra-da-mantiqueira.jpg" data-city="Pedra do Baú" data-alt="Pedra do Baú na Serra da Mantiqueira"><img src="assets/serra-da-mantiqueira.jpg" alt="" loading="lazy"><span>Pedra do Baú</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Monte Verde, Minas Gerais" aria-pressed="false" data-src="assets/serra-monte-verde.jpg" data-city="Monte Verde - MG" data-alt="Rua arborizada e florida em Monte Verde, Minas Gerais"><img src="assets/serra-monte-verde.jpg" alt="" loading="lazy"><span>Monte Verde - MG</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Gonçalves, Minas Gerais" aria-pressed="false" data-src="assets/serra-goncalves.jpg" data-city="Gonçalves - MG" data-alt="Igreja em Gonçalves, Minas Gerais"><img src="assets/serra-goncalves.jpg" alt="" loading="lazy"><span>Gonçalves - MG</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Visconde de Mauá, Rio de Janeiro" aria-pressed="false" data-src="assets/serra-visconde-de-maua.jpg" data-city="Visconde de Mauá - RJ" data-alt="Poço de água e mata em Visconde de Mauá, Rio de Janeiro"><img src="assets/serra-visconde-de-maua.jpg" alt="" loading="lazy"><span>Visconde de Mauá - RJ</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Passa Quatro, Minas Gerais" aria-pressed="false" data-src="assets/serra-passa-quatro.jpg" data-city="Passa Quatro - MG" data-alt="Igreja e montanhas em Passa Quatro, Minas Gerais"><img src="assets/serra-passa-quatro.jpg" alt="" loading="lazy"><span>Passa Quatro - MG</span></button>
+          </div>
+          <a class="button gallery-contact" data-wa-message="Olá! Tenho interesse em consultar os pacotes para a Serra da Mantiqueira." target="_blank" rel="noopener noreferrer">Consultar a Serra da Mantiqueira <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </dialog>
+      <dialog class="destination-gallery" id="litoral-gallery" aria-labelledby="litoral-gallery-title">
+        <div class="gallery-dialog-inner">
+          <header class="gallery-heading">
+            <div><p class="gallery-eyebrow">LITORAL NORTE</p><h3 id="litoral-gallery-title">Galeria de destinos</h3></div>
+            <button class="gallery-close" type="button" aria-label="Fechar galeria">×</button>
+          </header>
+          <div class="gallery-stage">
+            <button class="gallery-nav gallery-previous" type="button" aria-label="Foto anterior"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <figure class="gallery-figure">
+              <img class="gallery-main-image" src="assets/litoral-norte.jpg" alt="Praia do Português em Ubatuba, no Litoral Norte">
+              <figcaption><strong class="gallery-city">Praia do Português - Ubatuba</strong><span class="gallery-counter">1 de 5</span></figcaption>
+            </figure>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Próxima foto"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="gallery-thumbnails" aria-label="Escolha uma cidade do Litoral Norte">
+            <button class="gallery-thumbnail is-selected" type="button" aria-label="Ver foto da Praia do Português, em Ubatuba" aria-pressed="true" data-src="assets/litoral-norte.jpg" data-city="Praia do Português - Ubatuba" data-alt="Praia do Português em Ubatuba, no Litoral Norte"><img src="assets/litoral-norte.jpg" alt="" loading="lazy"><span>Praia do Português - Ubatuba</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Ilhabela, São Paulo" aria-pressed="false" data-src="assets/litoral-ilhabela.jpg" data-city="Ilhabela - SP" data-alt="Praia e montanhas em Ilhabela, São Paulo"><img src="assets/litoral-ilhabela.jpg" alt="" loading="lazy"><span>Ilhabela - SP</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de São Sebastião, São Paulo" aria-pressed="false" data-src="assets/litoral-sao-sebastiao.jpg" data-city="São Sebastião - SP" data-alt="Rua com vista para o mar em São Sebastião, São Paulo"><img src="assets/litoral-sao-sebastiao.jpg" alt="" loading="lazy"><span>São Sebastião - SP</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Caraguatatuba, São Paulo" aria-pressed="false" data-src="assets/litoral-caraguatatuba.jpg" data-city="Caraguatatuba - SP" data-alt="Calçadão à noite em Caraguatatuba, São Paulo"><img src="assets/litoral-caraguatatuba.jpg" alt="" loading="lazy"><span>Caraguatatuba - SP</span></button>
+            <button class="gallery-thumbnail" type="button" aria-label="Ver foto de Bertioga, São Paulo" aria-pressed="false" data-src="assets/litoral-bertioga.jpg" data-city="Bertioga - SP" data-alt="Caminho de areia entre construções até a praia em Bertioga, São Paulo"><img src="assets/litoral-bertioga.jpg" alt="" loading="lazy"><span>Bertioga - SP</span></button>
+          </div>
+          <a class="button gallery-contact" data-wa-message="Olá! Gostaria de consultar os pacotes disponíveis para o Litoral Norte." target="_blank" rel="noopener noreferrer">Consultar o Litoral Norte <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </dialog>
     </section>
 
     <section class="section packages page-width" id="pacotes" aria-labelledby="packages-title">
@@ -167,4 +250,7 @@
   <a class="whatsapp-float" data-wa-message="Olá! Acessei o site da Caminhos & Roteiros e gostaria de planejar uma viagem." target="_blank" rel="noopener noreferrer" aria-label="Fale com a Caminhos & Roteiros pelo WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
 </body>
 </html>
+
+
+
 
